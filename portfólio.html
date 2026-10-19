@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Luis Guilherme Cardoso Sousa | Portfólio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF3F1; --surface:#FFFFFF; --ink:#12262B; --muted:#4F6368; --line:#CBD8D5;
+  --blue:#1F4E9C; --tile:#1F4E9C; --amber:#B97A00; --on-blue:#FFFFFF;
+  --head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1A1D; --surface:#15272B; --ink:#E8F0EE; --muted:#9DB2B6; --line:#27403F;
+    --blue:#7FA8F0; --tile:#7FA8F0; --amber:#E8B04A; --on-blue:#0E1A1D; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1A1D; --surface:#15272B; --ink:#E8F0EE; --muted:#9DB2B6; --line:#27403F;
+  --blue:#7FA8F0; --tile:#7FA8F0; --amber:#E8B04A; --on-blue:#0E1A1D; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);line-height:1.05;margin:0}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-weight:500}
+nav .links{display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{color:var(--blue);text-decoration:underline}
+
+/* hero */
+.hero{padding:40px 0 56px}
+.hero h1{font-size:clamp(46px,9.5vw,112px);font-weight:800;letter-spacing:-.03em;max-width:11ch}
+.hero .role{font-size:clamp(18px,2.4vw,24px);max-width:34ch;margin:24px 0 0;color:var(--muted)}
+.band{margin-top:44px;display:grid;grid-template-columns:1.1fr 1fr;border:2px solid var(--blue);border-radius:6px;overflow:hidden;background:var(--surface)}
+.tiles{min-height:170px;background:var(--tile);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='none'/%3E%3Cpath d='M30 4 56 30 30 56 4 30Z' fill='none' stroke='%23000' stroke-width='3'/%3E%3Ccircle cx='30' cy='30' r='8' fill='%23000'/%3E%3Ccircle cx='0' cy='0' r='6' fill='%23000'/%3E%3Ccircle cx='60' cy='0' r='6' fill='%23000'/%3E%3Ccircle cx='0' cy='60' r='6' fill='%23000'/%3E%3Ccircle cx='60' cy='60' r='6' fill='%23000'/%3E%3C/svg%3E");
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='none'/%3E%3Cpath d='M30 4 56 30 30 56 4 30Z' fill='none' stroke='%23000' stroke-width='3'/%3E%3Ccircle cx='30' cy='30' r='8' fill='%23000'/%3E%3Ccircle cx='0' cy='0' r='6' fill='%23000'/%3E%3Ccircle cx='60' cy='0' r='6' fill='%23000'/%3E%3Ccircle cx='0' cy='60' r='6' fill='%23000'/%3E%3Ccircle cx='60' cy='60' r='6' fill='%23000'/%3E%3C/svg%3E");
+  -webkit-mask-size:60px 60px;mask-size:60px 60px}
+.readout{padding:24px 28px;display:grid;gap:14px;align-content:center}
+.readout div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.readout div:last-child{border:0;padding:0}
+.readout span{color:var(--muted)}
+.readout b{font-weight:600;text-align:right}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--blue)}
+.btn.primary{background:var(--blue);color:var(--on-blue)}
+.btn.ghost{color:var(--blue)}
+.btn:hover{transform:translateY(-1px)}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(30px,4.6vw,48px);font-weight:800;letter-spacing:-.02em;margin-bottom:28px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about p{margin:0 0 14px;max-width:62ch}
+
+.feature{background:var(--surface);border:2px solid var(--blue);border-radius:6px;padding:32px;display:grid;grid-template-columns:1.3fr 1fr;gap:32px}
+.feature h3{font-size:clamp(26px,3.6vw,38px);font-weight:800;margin-bottom:6px}
+.feature .where{color:var(--amber);font-weight:600;margin:0 0 14px}
+.feature p{margin:0 0 12px}
+.stack{list-style:none;margin:0;padding:0;display:grid;gap:0;align-content:start;border-left:3px solid var(--amber);padding-left:20px}
+.stack li{padding:9px 0;border-bottom:1px solid var(--line)}
+.stack li:last-child{border:0}
+.stack small{display:block;color:var(--muted);font-size:14px}
+.second{margin-top:28px;display:grid;grid-template-columns:1.3fr 1fr;gap:32px;padding:8px 4px}
+.second h3{font-size:26px;font-weight:800;margin-bottom:6px}
+.second .where{color:var(--amber);font-weight:600;margin:0 0 12px}
+.second p{margin:0}
+.second ul{margin:0;padding-left:18px;color:var(--muted)}
+.second li{margin-bottom:6px}
+
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}
+.skills div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.skills dt{font-weight:600}
+.skills dd{margin:0;color:var(--muted)}
+
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.edu h3{font-size:24px;font-weight:800;margin-bottom:8px}
+.edu p{margin:0 0 6px;color:var(--muted)}
+.edu ul{margin:0;padding:0;list-style:none}
+.edu li{padding:10px 0;border-bottom:1px solid var(--line)}
+.edu li span{display:block;color:var(--muted);font-size:15px}
+
+.contact p{max-width:52ch;margin:0 0 22px}
+.contact .big{font-family:var(--head);font-weight:800;font-size:clamp(22px,4.2vw,40px);word-break:break-word}
+footer{padding:28px 0 40px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+.top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.themebtn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+
+@media (max-width:760px){
+  .band,.about,.feature,.second,.skills,.edu{grid-template-columns:1fr}
+  .skills div{grid-template-columns:1fr;gap:2px}
+  .tiles{min-height:110px}
+  .feature{padding:22px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .tiles{animation:drift 14s linear infinite}
+  @keyframes drift{from{-webkit-mask-position:0 0;mask-position:0 0}to{-webkit-mask-position:60px 60px;mask-position:60px 60px}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Principal">
+    <span>Luis Guilherme</span>
+    <div class="links">
+      <a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#habilidades">Habilidades</a><a href="#formacao">Formação</a><a href="#contato">Contato</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Luis Guilherme Cardoso Sousa</h1>
+    <p class="role">Estudante de Sistemas de Informação que desenvolve software, de aplicações web a dispositivos embarcados.</p>
+    <div class="band">
+      <div class="tiles" role="img" aria-label="Padrão inspirado nos azulejos de São Luís"></div>
+      <div class="readout">
+        <div><span>Cidade</span><b>São Luís, MA</b></div>
+        <div><span>Curso</span><b>Sistemas de Informação</b></div>
+        <div><span>Período</span><b>6º, CEST</b></div>
+        <div><span>Conclusão prevista</span><b>12/2027</b></div>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="#projetos">Ver projetos</a>
+      <a class="btn ghost" href="https://github.com/Cardosoo12" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn ghost" href="https://linkedin.com/in/LuisGcardoso" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <section id="sobre" class="about">
+    <h2 style="grid-column:1/-1;margin-bottom:0">Sobre mim</h2>
+    <div>
+      <p>Tenho 21 anos, moro em São Luís e estudo Sistemas de Informação no Centro Universitário Santa Terezinha (CEST). Meu foco é desenvolvimento de software, com base em Java, Python e JavaScript.</p>
+      <p>Aprendo construindo: já desenvolvi uma solução para monitorar eventos e apoiar decisões no I Congresso Transdisciplinar CEST e levei informática básica para professores de uma creche escola.</p>
+    </div>
+    <div>
+      <p>Também trabalho com redes de computadores, sistemas embarcados e IoT, e uso APIs de IA, como Claude, Gemini, OpenAI e DeepSeek, nos meus projetos.</p>
+      <p>Falo inglês em nível básico/intermediário, com leitura, escrita e conversação.</p>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <article class="feature">
+      <div>
+        <h3>São Luís no Clima</h3>
+        <p class="where">I Congresso Transdisciplinar CEST, em desenvolvimento</p>
+        <p>Software de alerta meteorológico para a região metropolitana de São Luís. O objetivo é ajudar na prevenção de desastres naturais, como enchentes e deslizamentos.</p>
+        <p>A solução usa arquitetura orientada a eventos e integra APIs meteorológicas. O desenvolvimento é organizado com Jira e GitHub.</p>
+      </div>
+      <ul class="stack" aria-label="Tecnologias do projeto">
+        <li>React.js<small>Front-end</small></li>
+        <li>Node.js<small>Back-end</small></li>
+        <li>APIs meteorológicas<small>Dados de clima</small></li>
+        <li>Jira e GitHub<small>Gestão e versionamento</small></li>
+      </ul>
+    </article>
+
+    <article class="second">
+      <div>
+        <h3>Projeto de extensão na creche escola CEDAC</h3>
+        <p class="where">Extensão universitária</p>
+        <p>Palestras e oficinas para capacitar professores no uso de ferramentas digitais básicas. O projeto contribuiu para a inclusão digital da equipe docente e para a melhoria da rotina pedagógica da escola.</p>
+      </div>
+      <ul>
+        <li>Conceitos introdutórios de informática</li>
+        <li>Editores de texto, planilhas e apresentações</li>
+        <li>Ferramentas para planejar aulas, organizar materiais e se comunicar com as famílias</li>
+      </ul>
+    </article>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades técnicas</h2>
+    <dl class="skills">
+      <div><dt>Linguagens</dt><dd>Java, JavaScript, Python</dd></div>
+      <div><dt>Banco de dados</dt><dd>MySQL, SQL</dd></div>
+      <div><dt>Redes</dt><dd>TCP/IP, DHCP e outros protocolos, Cisco Packet Tracer</dd></div>
+      <div><dt>Embarcados e IoT</dt><dd>ESP32, Arduino, PlatformIO, MQTT</dd></div>
+      <div><dt>IA e LLMs</dt><dd>Claude API, Google Gemini, OpenAI API, DeepSeek Chat</dd></div>
+      <div><dt>Ferramentas</dt><dd>Pacote Office, Jira, GitHub</dd></div>
+    </dl>
+  </section>
+
+  <section id="formacao">
+    <h2>Formação</h2>
+    <div class="edu">
+      <div>
+        <h3>Sistemas de Informação</h3>
+        <p>Centro Universitário Santa Terezinha (CEST)</p>
+        <p>6º período, conclusão prevista para 12/2027</p>
+      </div>
+      <ul aria-label="Cursos complementares">
+        <li>Linguagem de Programação Python Básico<span>Fundação Bradesco</span></li>
+        <li>Comportamento Organizacional, Gestão<span>Eskada UEMA</span></li>
+        <li>Getting Started with Cisco Packet Tracer<span>Cisco Networking Academy (Netacad)</span></li>
+        <li>Java para Iniciantes: Fundamentos, POO e Projeto<span>Udemy</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <h2>Contato</h2>
+    <p>Procuro oportunidades para aplicar e ampliar o que aprendi em desenvolvimento de software. Escreva para mim:</p>
+    <a class="big" href="mailto:guilhermecardoso102@gmail.com">guilhermecardoso102@gmail.com</a>
+    <div class="cta">
+      <a class="btn primary" href="https://linkedin.com/in/LuisGcardoso" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/Cardosoo12" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="top">
+      <span>© 2026 Luis Guilherme Cardoso Sousa, São Luís, MA</span>
+      <button class="themebtn" id="tb" type="button">Alternar tema</button>
+    </div>
+  </footer>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('tb'),r=document.documentElement;
+  b.addEventListener('click',function(){
+    var dark=r.getAttribute('data-theme')==='dark'||(r.getAttribute('data-theme')!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+    r.setAttribute('data-theme',dark?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>
